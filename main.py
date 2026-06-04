@@ -993,15 +993,7 @@ async def main():
         logger.warning(f"Channel 2 - Bot may not be admin: {e}")
     
     logger.info("Bot is running...")
-    await app.run()
 
 if __name__ == "__main__":
-    try:
-        asyncio.run(main())
-    except KeyboardInterrupt:
-        logger.info("Bot stopped by user.")
-    except Exception as e:
-        logger.error(f"Fatal error: {e}")
-        import traceback
-        traceback.print_exc()
+    app.run()
 
